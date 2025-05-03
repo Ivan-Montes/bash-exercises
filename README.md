@@ -1,1 +1,1 @@
-# bash-scripting
+# bash-exercises
