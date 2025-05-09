@@ -178,7 +178,7 @@ order_by_money_desc() {
 
 add_record() {
 
-  local db="$1"
+  local db="${1}"
   local -a keys=("Name" "City" "Balance" "Phone")
   local -A values
   local errors=0
@@ -271,7 +271,7 @@ delete_user_from_db() {
 
 menu() {
 
-  local db=$"${1}"
+  local db="${1}"
   local option=""
 
   while [[ "${option}" != "q" && "${option}" != "Q" ]]; do
