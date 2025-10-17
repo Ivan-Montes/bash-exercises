@@ -137,9 +137,9 @@ Output format:
 ```
 The file classification of directory XXXX is:  
 There are t text files: X1, X2, ... Xt  
-There are dv device files: X1, X2, ... Xdv  
-There are d directories: X1, X2, ... Xd  
-There are e executable files: X1, X2, ... Xe
+There are dv directories: X1, X2, ... Xdv  
+There are d executable files: X1, X2, ... Xd  
+There are e unknown files: X1, X2, ... Xe
 ```
 
 > **Hint**: use the `file` command.
@@ -152,9 +152,9 @@ Create a script named `instalar` that receives two arguments: file and directory
 
 Functionality:
 
+* Verify that the file is valid and that there are appropriate permissions.
 * Copy the file to the directory.
 * Change permissions: execution allowed for owner and group, denied for others.
-* Verify that the file is valid and that there are appropriate permissions.
 
 Return codes:
 
@@ -172,7 +172,7 @@ Create a script named `infosis` that displays:
    ```
    Hello user uuu, you are connected in terminal ttt
    ```
-2. Date and time (use `fecha_hora`).
+2. Date and time (format `%date %time`).
 3. List of logged-in users.
 4. List of running processes of the user.
 
@@ -201,8 +201,8 @@ Script named `infouser` that receives a login as the only parameter and displays
 * `1`: syntax error
 * `2`: user does not exist
 
-> Part of the information can be obtained from `/etc/passwd` or with `ypcat passwd`.
-> Useful utilities: `getopts`, `finger`.
+> Part of the information can be obtained from `/etc/passwd` or with `getent passwd`.
+> Useful utilities: `ps`, `who`.
 
 ---
 
@@ -285,7 +285,7 @@ AGENDA (Enter option. 'h' for help) >>
 **Example output:**
 
 ```
------------------ AGENDA -----------------------------
+----------------- CONTACT LIST -----------------------
 Name            Location      Balance   Phone
 Juan Ruiz       Cartagena     134       968507765
 Jaime López     Málaga         95       952410455
