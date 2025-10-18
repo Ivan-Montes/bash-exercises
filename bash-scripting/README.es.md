@@ -137,9 +137,9 @@ Formato de salida:
 ```
 La clasificación de ficheros del directorio XXXX es:  
 Hay t ficheros de texto: X1, X2, ... Xt  
-Hay dv ficheros de dispositivo: X1, X2, ... Xdv  
-Hay d directorios: X1, X2, ... Xd  
-Hay e ficheros ejecutables: X1, X2, ... Xe
+Hay dv directorios: X1, X2, ... Xdv  
+Hay d ficheros ejecutables: X1, X2, ... Xd  
+Hay e ficheros desconocidos: X1, X2, ... Xe
 ```
 
 > **Pista**: usar la orden `file`.
@@ -152,9 +152,9 @@ Crear un script llamado `instalar` que reciba dos argumentos: fichero y director
 
 Funcionalidad:
 
-* Copiar el fichero al directorio.
-* Cambiar permisos: ejecución permitida para el dueño y grupo, denegada para otros.
 * Verificar que el fichero es válido y que hay permisos adecuados.
+* Copiar el fichero al directorio.
+* Cambiar permisos: ejecución permitida para el dueño y grupo, denegada para otros
 
 Códigos de retorno:
 
@@ -172,7 +172,7 @@ Crear un script llamado `infosis` que muestre:
    ```
    Hola usuario uuu, está usted conectado en el terminal ttt
    ```
-2. Fecha y hora (usar `fecha_hora`).
+2. Fecha y hora (formato `%fecha %hora`).
 3. Lista de usuarios conectados.
 4. Lista de procesos del usuario en ejecución.
 
@@ -201,8 +201,8 @@ Script llamado `infouser` que recibe un login como único parámetro y muestra:
 * `1`: error de sintaxis
 * `2`: usuario no existe
 
-> Parte de la información se puede obtener desde `/etc/passwd` o con `ypcat passwd`.
-> Utilidades útiles: `getopts`, `finger`.
+> Parte de la información se puede obtener desde `/etc/passwd` o con `getent passwd`.
+> Utilidades útiles: `ps`, `who`.
 
 ---
 
