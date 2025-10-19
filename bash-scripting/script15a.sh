@@ -265,8 +265,8 @@ delete_user_from_db() {
   local db="${1}"
   local name="${2}"
 
-  grep -w "${name}" "${db}" >/dev/null && sed -i.bak "/${name}/d" "${db}"
-  
+  grep -w "${name}" "${db}" >/dev/null && sed -i.bak "/\\b${name}\\b/d" "${db}"
+
 }
 
 menu() {
